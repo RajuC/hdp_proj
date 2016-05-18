@@ -1,0 +1,242 @@
+<html>
+	<head>
+		<title>Heart Disease Analytics</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/myScript.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+		<script src="js/ajaxGetPost.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		
+		<script>		
+		function thal_prediction_charts(data,ChartType)
+		{
+			var chart_type=ChartType;
+			var jsonData=data;
+			if(ChartType=="GaugeChart")
+			google.load("visualization", "1", {packages:["gauge"], callback: drawGauge});
+			
+			function drawGauge() {
+		    	
+		      gaugeData = new google.visualization.DataTable();
+		      gaugeData.addColumn('number', 'thal_value');
+		      
+		      $.each(jsonData, function(i,jsonData)
+			 {
+				gaugeData.addRows(1);
+				var value=jsonData.value;
+				var description=jsonData.description;					
+				gaugeData.setCell( 0, 0, value);				
+			 });     
+			//alert(gaugeData.getValue(0, 0));       
+		    var gaugeOptions = {min: 0, max: 7.0, yellowFrom: 3.1, yellowTo:6 , 
+		    		redFrom: 6.1, redTo: 7.0, 
+		    		minorTicks: 1,
+		    		'backgroundColor': 'transparent',
+		    		};
+		    var gauge;   
+		      	
+		     gauge = new google.visualization.Gauge(document.getElementById('gauge_div_thal'));
+		     gauge.draw(gaugeData, gaugeOptions);
+		    }		    
+		    }
+
+		
+		function slope_prediction_charts(data,ChartType)
+		{
+			var chart_type=ChartType;
+			var jsonData=data;
+			if(ChartType=="GaugeChart")
+			google.load("visualization", "1", {packages:["gauge"], callback: drawGauge});
+			
+			function drawGauge() {
+		    	
+		      gaugeData = new google.visualization.DataTable();
+		      gaugeData.addColumn('number', 'slope_value');
+		      
+		      $.each(jsonData, function(i,jsonData)
+			 {
+				gaugeData.addRows(1);
+				var value=jsonData.slope_value;
+				var description=jsonData.description;					
+				gaugeData.setCell( 0, 0, value);				
+			 });     
+			//alert(gaugeData.getValue(0, 0));       
+		    var gaugeOptions = {min: 0, max: 7.0, yellowFrom: 3.1, yellowTo:6 , 
+		    		redFrom: 6.1, redTo: 7.0, 
+		    		minorTicks: 1,
+		    		'backgroundColor': 'transparent',
+		    		};
+		    var gauge;   
+		      	
+		     gauge = new google.visualization.Gauge(document.getElementById('gauge_div_slope'));
+		     gauge.draw(gaugeData, gaugeOptions);
+		    }		    
+		    }
+
+		function chol_prediction_charts(data,ChartType)
+		{
+			var chart_type=ChartType;
+			var jsonData=data;
+			if(ChartType=="GaugeChart")
+			google.load("visualization", "1", {packages:["gauge"], callback: drawGauge});
+			
+			function drawGauge() {
+		    	
+		      gaugeData = new google.visualization.DataTable();
+		      gaugeData.addColumn('number', 'chol_value');
+		      
+		      $.each(jsonData, function(i,jsonData)
+			 {
+				gaugeData.addRows(1);
+				var value=jsonData.chol_value;
+				var description=jsonData.description;					
+				gaugeData.setCell( 0, 0, value);				
+			 });     
+			//alert(gaugeData.getValue(0, 0));       
+		    var gaugeOptions = {min: 0, max: 300.0, yellowFrom: 200.1, yellowTo:220 , 
+		    		redFrom: 220.1, redTo: 300.0, 
+		    		minorTicks: 10,
+		    		'backgroundColor': 'transparent',
+		    		};
+		    var gauge;   
+		      	
+		     gauge = new google.visualization.Gauge(document.getElementById('gauge_div_chol'));
+		     gauge.draw(gaugeData, gaugeOptions);
+		    }		    
+		    }
+		
+		function cp_prediction_charts(data,ChartType)
+		{
+			var chart_type=ChartType;
+			var jsonData=data;
+			if(ChartType=="GaugeChart")
+			google.load("visualization", "1", {packages:["gauge"], callback: drawGauge});
+			
+			function drawGauge() {
+		    	
+		      gaugeData = new google.visualization.DataTable();
+		      gaugeData.addColumn('number', 'cp_value');
+		      
+		      $.each(jsonData, function(i,jsonData)
+			 {
+				gaugeData.addRows(1);
+				var value=jsonData.CP_value;
+				var description=jsonData.description;					
+				gaugeData.setCell( 0, 0, value);				
+			 });     
+			//alert(gaugeData.getValue(0, 0));       
+		    var gaugeOptions = {min: 0, max: 4.0, yellowFrom: 1.0, yellowTo: 2.0 , 
+		    			greenFrom: 3.0,
+		    		   greenTo: 4.0,
+		    		   greenColor: "#00ff00",
+		    		   orangeFrom: 2.0,
+		    		   orangeTo: 3.0,
+		    		   orangeColor: "#e0440e",
+		    		redFrom: 0.0, redTo: 1.0, 
+		    		minorTicks: 10,
+		    		mode: "sleek",
+		    		'backgroundColor': 'transparent',
+		    		};
+		    var gauge;   
+		      	1
+		     gauge = new google.visualization.Gauge(document.getElementById('gauge_div_cp'));
+		     gauge.draw(gaugeData, gaugeOptions);
+		    }		    
+		    }
+		
+		$(document).ready(function () 
+		{		
+			thal_url_predictionGauge='js/thal_rec.json';
+			ajax_data('GET',thal_url_predictionGauge, function(data)
+			{
+				thal_prediction_charts(data,"GaugeChart");
+			});		
+			
+			slope_url_predictionGauge='js/slope_rec.json';
+			ajax_data('GET',slope_url_predictionGauge, function(data)
+			{
+				slope_prediction_charts(data,"GaugeChart");
+			});		
+			
+			chol_url_predictionGauge='js/chol_rec.json';
+			ajax_data('GET',chol_url_predictionGauge, function(data)
+			{
+				chol_prediction_charts(data,"GaugeChart");
+			});	
+			
+			cp_url_predictionGauge='js/cp_rec.json';
+			ajax_data('GET',cp_url_predictionGauge, function(data)
+			{
+				cp_prediction_charts(data,"GaugeChart");
+			});	
+			
+		});
+		
+	</script>
+		
+	</head>
+	<body>
+		<table width="100%">
+			<tr>
+				<td width="900px">
+					<h1 class="logo">logo here</h1>
+				</td>
+				<td width="900px">
+					<ul class="nav nav-pills" style="float:right">
+					<li ><a href="home.html">Home</a></li>
+					<li ><a href="user_form.html">User form</a></li>
+					<li class="active"><a href="analytics.html">Analytics</a></li>
+					<li><a href="logout.html">Log Out</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" data-target="#" href="http://www.google.com">
+						About Us <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="management.html">Team</a></li>
+						</ul>
+					</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		</br>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 ">
+					<div id="gauge_div_thal" style="width: 250px; height: 300px; margin: 0 auto;"></div>
+				</div>	
+				
+				<div class="col-md-4 ">
+					<div id="gauge_div_chol" style="width: 250px; height: 300px; margin: 0 auto;"></div>
+				</div>
+				
+				<div class="col-md-4 ">
+					<div id="gauge_div_slope" style="width: 250px; height: 300px; margin: 0 auto;"></div>
+				</div>
+				<div class="col-md-4 ">
+					<div id="gauge_div_cp" style="width: 250px; height: 300px; margin: 0 auto;"></div>
+				</div>
+				
+			</div>
+			
+					
+		</div>
+		</br>
+		</br>
+		<div class="footer">
+			<footer>
+				<p>Contact information: <a href="mailto:cmpe239_PhoenixTeam@gmail.com">cmpe239_PhoenixTeam@gmail.com</a>.</p>
+				<p>&copy; 2016, CMPE-239 Phoenix Team</p>
+			</footer>
+		</div>
+	</body>
+</html>	

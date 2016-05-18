@@ -1,0 +1,27 @@
+//Resting Blood Preassure (range: 94-200)
+
+[
+
+  {
+    "code": "trestbps",
+    "trestbps_value": 90,
+    "description": "You  have Typical Angina",
+    "year": "Dec'17"
+
+  },
+  {
+    "code": "CP",
+    "trestbps_value": 120,
+    "description": "You  have Typical Angina",
+    "year": "Dec'17"
+  },
+
+  //TODO: User Input Rajjj Needs to Update
+  {
+    "code": "CP",
+    "CP_value": "",
+    "year": "Dec'17"
+  }
+
+
+]

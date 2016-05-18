@@ -1,0 +1,69 @@
+/*
+Age	Target HR Zone 50-85%	Average Maximum Heart Rate, 100%
+20 years	100-170 beats per minute	200 beats per minute
+30 years	95-162 beats per minute	190 beats per minute
+35 years	93-157 beats per minute	185 beats per minute
+40 years	90-153 beats per minute	180 beats per minute
+45 years	88-149 beats per minute	175 beats per minute
+50 years	85-145 beats per minute	170 beats per minute
+55 years	83-140 beats per minute	165 beats per minute
+60 years	80-136 beats per minute	160 beats per minute
+65 years	78-132 beats per minute	155 beats per minute
+70 years	75-128 beats per minute	150 beats per minute
+*/
+
+
+[
+  //MAximum heart rate achieved
+
+  {
+    "code": "Thalach",
+    "Age" : 20,
+    "thalach_value": 200 ,
+    "description": "Maximum Heart Rate",
+    "year": "Dec'17"
+  },
+  {
+    "code": "Thalach",
+    "Age" : 30,
+    "thalach_value": 190 ,
+    "description": "Maximum Heart Rate",
+    "year": "Dec'17"
+  },
+  {
+    "code": "Thalach",
+    "Age" : 40,
+    "thalach_value": 180 ,
+    "description": "Maximum Heart Rate",
+    "year": "Dec'17"
+  },
+  {
+    "code": "Thalach",
+    "Age" : 50,
+    "thalach_value": 170 ,
+    "description": "Maximum Heart Rate",
+    "year": "Dec'17"
+  },
+  {
+    "code": "Thalach",
+    "Age" : 60,
+    "thalach_value": 160 ,
+    "description": "Maximum Heart Rate",
+    "year": "Dec'17"
+  },
+  {
+    "code": "Thalach",
+    "Age" : 70,
+    "thalach_value": 150 ,
+    "description": "Maximum Heart Rate",
+    "year": "Dec'17"
+  },
+  //TODO: User Input Rajjj Needs to Update
+  {
+    "code": "Thalach",
+    "Age" : 20,
+    "thalach_value": 200 ,
+    "description": "Maximum Heart Rate",
+    "year": "Dec'17"
+  }
+]

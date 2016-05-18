@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>Heart Disease Prediction - Sign Up </title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/myScript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>    
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	</head>
+	<body>
+		<table width="100%">
+			<tr>
+				<td width="900px">
+					<h1 class="logo">logo here</h1>
+				</td>
+				<td>
+					<ul class="nav nav-pills" style="float:right">
+					<li ><a href="index.html">Home</a></li>
+					<li class="active"><a href="signup.html">Sign Up</a></li>
+					<li><a href="login.html">Login</a></li>
+					
+					<li class="dropdown">
+						<a data-toggle="dropdown" data-target="#" href="http://www.google.com">
+						About Us <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="management.html">Team</a></li>
+						</ul>
+					</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<div class="container">
+			<div class="row vcenter">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading" style="text-align:center"><h4>Sign Up</h4></div>
+						<div class="panel-body">
+							<form class="form-horizontal" role="form" id="signup_form" action="/signup/" method="post">
+								<div class="form-group">
+									<input type="hidden" name="action" value="signup">
+									<label for="firstname" class="col-lg-4 control-label">First Name<span class="req">*</span> </label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="fname" name="fname" required autocomplete="off"  placeholder="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="lastname" class="col-lg-4 control-label"> Last Name<span class="req">*</span> </label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="lname" placeholder="" name="lname" required autocomplete="off">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="sex" class="col-lg-4 control-label"> Sex<span class="req">*</span></label>
+									<div class="col-md-8">
+										<select name = "sex" id="sex">
+											<option value="0">Female</option>
+											<option value="1">Male</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="age" class="col-lg-4 control-label"> Age<span class="req">*</span> </label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="age" placeholder="" name="age" required autocomplete="off">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email" class="col-lg-4 control-label"> Email Address<span class="req">*</span></label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="email" placeholder="" name="email" required autocomplete="off">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="password" class="col-lg-4 control-label"> Set A Password<span class="req">*</span></label>
+									<div class="col-md-8">
+										<input type="password" class="form-control" id="pwd" placeholder="" name="pwd" required autocomplete="off">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<div style="text-align:center">
+										<button type="submit" class="btn btn-primary" id="register">Register</button>
+										
+									</div>
+								</div>
+								<span id="results" align="center" style="border:1px"></span>
+							</form>
+							 <script src="js/index.js"></script>
+
+							<div id ="reg_succ"></div>
+							<script type="text/javascript">
+							$('#signup_form').submit(function(e){
+    						$.ajax({
+      						type:'POST',
+      						url:'/signup/',
+      						data: $("#signup_form").serialize(),
+      						success:function(data){
+          					if (data == 'success')  {
+           						document.location.href="registration_success.html";
+          					}
+        					}
+    						});
+    						e.preventDefault();
+  							});
+							</script>   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</br>
+		</br>
+		</br>
+		<div class="footer">
+			<footer>
+				<p>Contact information: <a href="mailto:cmpe239_PhoenixTeam@gmail.com">cmpe239_PhoenixTeam@gmail.com</a>.</p>
+				<p>&copy; 2016, CMPE-239 Phoenix Team</p>
+			</footer>
+		</div>
+	</body>
+</html>	

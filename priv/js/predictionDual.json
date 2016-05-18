@@ -1,0 +1,28 @@
+[		
+	{
+		"thal": 3
+		"prediction": 0.58,
+		"ca": 1
+	},
+	{
+		"thal": 7,
+		"prediction": 0.38,
+		"ca": 2
+	},
+	{
+		"thal": 3,
+		"prediction": 0.50,
+		"ca": "3"
+	},
+	{
+		"thal": 6,
+		"prediction": 0.65,
+		"ca": 0
+	},
+	{
+		"thal": 3,
+		"prediction": 0.40,
+		"ca": 2
+	}
+	
+]

@@ -1,0 +1,22 @@
+[
+  //Thal
+  {
+    "code": "Thal",
+    "thal_value": 3,
+    "description": "You dont have Thalassemia",
+    "year": "Dec'17"
+  },
+  {
+    "code": "Thal",
+    "thal_value": 6,
+    "description": "You have Fixed defect of Thalassemia",
+    "year": "Dec'17"
+  },
+  {
+    "code": "Thal",
+    "thal_value": 7,
+    "description": "You have Reversable defect of Thalassemia",
+    "year": "Dec'17"
+  }
+
+]

@@ -1,0 +1,53 @@
+[		
+	{
+		"code": "Age",
+		"value": 57,
+		"name": "Age"
+	},
+	{
+		"code": "Sex",
+		"value": 1,
+		"name": "Sex"
+	},
+	{
+		"code": "trestbps",
+		"value": 124,
+		"name": "trestbps"
+	},
+	{
+		"code": "cp",
+		"value": 2,
+		"name": "cp"
+	},
+	{
+		"code": "chol",
+		"value": 261,
+		"name": "chol"
+	},
+	{
+		"code": "thalach",
+		"value": 141,
+		"name": "thalach"
+	},
+
+	{
+		"code": "oldpeak",
+		"value": 0.3,
+		"name": "oldpeak"
+	},
+	{
+		"code": "slope",
+		"value": 1,
+		"name": "slope"
+	},
+	{
+		"code": "ca",
+		"value": 0,
+		"name": "ca"
+	},
+	{
+		"code": "thal",
+		"value": 7,
+		"name": "thal"
+	}
+]

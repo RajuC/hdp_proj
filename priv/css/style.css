@@ -1,0 +1,107 @@
+body {
+  background-image: url('../images/background_image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#imagesCarousel {
+  width: 500px;
+  height: 333px;
+  margin:0 auto;
+}
+.carousel-inner {
+  width: 900px;
+}
+.nav.nav-pills {
+  float: right;
+  margin-right: 100px;
+}
+.logo {
+  text-indent: -999999px;
+  background: url('../images/logo.png') no-repeat;
+  margin-left: 100px;
+  width: 500px;
+  height: 130px;
+}
+.footer {
+  margin-left: 100px;
+}
+.thumnails {
+  margin-left: 100px
+}
+.image2 {
+  margin-left: 75px
+}
+.image3 {
+  margin-left: 75px
+}
+.bodyContent1 {
+  margin-left: 100px;
+}
+.bodyContent2 {
+  margin-left: 50px;
+}
+#map-canvas {
+  width: 500px;
+  margin-left: 100px;
+}
+#map-canvas1 {
+  margin-left: 50px;
+}
+#manage ul{
+  padding:0 0 0 0;
+  margin:0 0 0 0;
+}
+#manage ul > li{
+  list-style:none;
+}
+#manage ul > li > img {
+  border: 3px;
+  border-color: #000000;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.accolade p {
+    margin: 10px 0;
+}
+.arrow1 {
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    border: 10px solid transparent;
+    width: 20px;
+    border-bottom-color: #ccc;
+}
+.arrow2 {
+    position: absolute;
+    top: -19px;
+    left: 15px;
+    border: 10px solid transparent;
+    width: 20px;
+    border-bottom-color: #fff;
+}
+.download:first-child {
+    margin-top: 60px;
+}
+.download {
+    margin-top: 20px;
+    min-height: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+.accolade-container {
+    padding-top: 20px;
+}
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+.accolade {
+    margin-top: 10px;
+    min-height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+    text-align: left;
+}
